@@ -1,0 +1,17 @@
+{
+  "name": "listenbrainz-export",
+  "version": "1.0.0",
+  "description": "CLI to export listenbrainz listening data",
+  "main": "index.js",
+  "type": "module",
+  "bin": "./index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Kenrick",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^9.2.0",
+    "node-fetch": "^3.2.3"
+  }
+}
