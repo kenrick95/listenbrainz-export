@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>listenbrainz-export</title>
+    <style>
+      * {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      header,
+      main,
+      footer {
+        max-width: 640px;
+        margin: 0 auto;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      }
+      #form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      .label {
+        grid-column: 1;
+        margin-left: auto;
+      }
+      .input {
+        grid-column: 2;
+        margin-right: auto;
+      }
+      .button {
+        grid-column: 2;
+        margin-right: auto;
+      }
+      #error {
+        margin-top: 1rem;
+        padding: 1rem;
+        background-color: rgb(255, 233, 246);
+        font-family: 'Courier New', Courier, monospace;
+      }
+      #error:empty {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>listenbrainz-export</h1>
+    </header>
+    <main>
+      <form id="form">
+        <label class="label" for="username">Username: </label>
+        <input class="input" name="username" id="username" type="text" />
+        <input class="button" id="submit" type="submit" value="Submit" />
+      </form>
+      <div id="loading"></div>
+      <div id="error"></div>
+    </main>
+    <footer>
+      <a
+        href="https://github.com/kenrick95/listenbrainz-export"
+        target="_blank"
+        rel="noopener"
+        >Source code on GitHub</a
+      >
+    </footer>
+    <script type="module" src="browser.js"></script>
+  </body>
+</html>
